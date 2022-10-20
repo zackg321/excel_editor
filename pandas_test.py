@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime
 
 cust_name = input("Please enter customer name: ")
 master_list = pd.read_excel(f'{cust_name} TC Plant Inventory List.xlsx', sheet_name = "Master List")
