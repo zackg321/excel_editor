@@ -52,7 +52,7 @@ def fill_master_list(wb, row, strain_name):
     #stage 1 explants
     wb["Master List"].cell(row = row, column = 4).value = f"='{strain_name}'!{get_column_letter(2)}2"
     #stage 1 date
-    wb["Master List"].cell(row = row, column = 9).value = f"='{strain_name}'!{get_column_letter(4)}3"
+    wb["Master List"].cell(row = row, column = 9).value = f"='{strain_name}'!{get_column_letter(2)}3"
     #stage 2 explants
     wb["Master List"].cell(row = row, column = 5).value = f"='{strain_name}'!{get_column_letter(2)}5"
     #stage 2 date

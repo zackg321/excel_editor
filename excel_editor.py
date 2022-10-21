@@ -1,6 +1,8 @@
 import openpyxl
-
 from openpyxl import Workbook, load_workbook
+
+import datetime
+from datetime import datetime
 
 #A Python program to insert data into TC excel workbook. 
 
@@ -10,7 +12,9 @@ def get_input():
     strain =  input("Enter strain name: ")
     stage = input("Enter the stage: ")
     explants = int(input("Enter number of explants: "))
-    date = input("Enter the date as MM/DD/YYYY: ")
+    date = (input("Enter the date as MM/DD/YYYY: "))
+    date_obj = datetime.strptime(date, "%m/%d/%Y")
+    date = date_obj
     data_list = [stage, date, explants, wb_name, strain]
     return data_list
 

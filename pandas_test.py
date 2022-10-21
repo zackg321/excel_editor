@@ -1,7 +1,6 @@
 import pandas as pd
-from datetime import datetime
 
-cust_name = input("Please enter customer name: ")
+cust_name = "Vertikal Tech"
 master_list = pd.read_excel(f'{cust_name} TC Plant Inventory List.xlsx', sheet_name = "Master List")
 
 def create_stage1_list():
