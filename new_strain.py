@@ -2,6 +2,8 @@ import openpyxl
 from openpyxl import Workbook, load_workbook
 from openpyxl.utils import get_column_letter
 
+import datetime
+from datetime import datetime
 
 ### A program to create a new strain in the inventory list
 
@@ -23,6 +25,8 @@ def get_data():
 
     #get date from user
     date = input("Please enter the date: ")
+    date_obj = datetime.strptime(date, "%m/%d/%Y")
+    date = date_obj
 
     data = [strain_name, num_explants, date, wb_name]
     return data
